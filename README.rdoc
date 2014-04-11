@@ -3,3 +3,5 @@
 Preconditions:
 
 In order to correctly store the data of each dish/value, the information within the CSV must be structured in a certain manner. The first column will represent the item or value's restaurant id. The second column will represent the item or value's price. The third column until the last column can represent an item (each item has its own column).
+
+If using the terminal to search for best prices and restaurant id, you must have quotes around the order.
