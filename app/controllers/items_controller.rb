@@ -10,15 +10,25 @@ class ItemsController < ApplicationController
   # GET /items/1
   # GET /items/1.json
   def show
+    @item = Item.find(params[:id])
   end
 
   # GET /items/new
   def new
     @item = Item.new
+    @price = @item.price
+    @restaurant_id = @item.price.restaurant_id
+    @amount = @item.price.amount
   end
 
   # GET /items/1/edit
   def edit
+  end
+
+  def import
+    Item.import(params[:file])
+    redirect_to root_url, notice: "Items imported."
+
   end
 
   # POST /items

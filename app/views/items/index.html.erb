@@ -22,6 +22,13 @@
   </tbody>
 </table>
 
+<h2>Import Items</h2>
+
+<%= form_tag import_items_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %>
+
 <br>
 
 <%= link_to 'New Item', new_item_path %>
