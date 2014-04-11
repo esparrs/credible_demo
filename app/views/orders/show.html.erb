@@ -1,14 +1,20 @@
-<p id="notice"><%= notice %></p>
+<div id="show_form">
+	<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @order.name %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @order.price %>
-</p>
-
-<%= link_to 'Edit', edit_order_path(@order) %> |
-<%= link_to 'Back', orders_path %>
+	<p id="order">
+	  <strong>Restaurant ID:</strong>
+	  <%= Order.search(@order.name)[0] %>
+	</p>
+	<br>
+	<br>
+	<br>
+	<p id="order">
+	  <strong>Price:</strong>
+	  <%= Order.search(@order.name)[1] %>
+	</p>
+	<br>
+	<br>
+	<br>
+	<%= link_to 'Edit', edit_order_path(@order) %> |
+	<%= link_to 'Back', orders_path %>
+</div>

@@ -6,6 +6,7 @@ class Order < ActiveRecord::Base
 	accepts_nested_attributes_for :prices, :values, :items 
 
 	def self.search(order)
+		order.to_str
 		list = order.split(/\W+/)
 		specific_order = Hash.new
 		value_tracker = Hash.new
@@ -37,6 +38,5 @@ class Order < ActiveRecord::Base
 		specific_order.sort_by {|k,v| v}
 		key, value = specific_order.first
 		return key, value.to_f()
-		# return specific_order
 	end
 end

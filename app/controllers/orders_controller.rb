@@ -4,7 +4,7 @@ class OrdersController < ApplicationController
   # GET /orders
   # GET /orders.json
   def index
-    @orders = Order.all
+    @order = Order.new.update_attribute(:name, params[:search])
   end
 
   # GET /orders/1
