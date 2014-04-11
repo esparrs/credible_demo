@@ -1,20 +1,23 @@
 <div id="show_form">
 	<p id="notice"><%= notice %></p>
-
+	<br>
+	<br>
+	<br>
 	<p id="order">
 	  <strong>Restaurant ID:</strong>
-	  <%= Order.search(@order.name)[0] %>
+	  <!-- This will give us the restaurant id -->
+	  <%= Order.search(@order.name)[0] %> 
 	</p>
 	<br>
 	<br>
 	<br>
 	<p id="order">
 	  <strong>Price:</strong>
+	  <!-- this will give us the total price -->
 	  <%= Order.search(@order.name)[1] %>
 	</p>
 	<br>
 	<br>
 	<br>
-	<%= link_to 'Edit', edit_order_path(@order) %> |
 	<%= link_to 'Back', orders_path %>
 </div>
